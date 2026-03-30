@@ -80,22 +80,23 @@ def get_image(row):
 
 # ---------------------------------------------------
 # BOOK BASED
-# ---------------------------------------------------
+# --------------------------------------------------
 def recommend_books(book_title, n=5):
+
     selected_row = books[books["book_title"] == book_title]
 
-if selected_row.empty:
-    st.error("Book not found")
-    return pd.DataFrame()
+    if selected_row.empty:
+        st.error("Book not found")
+        return pd.DataFrame()
 
-isbn = selected_row["isbn"].values[0]
+    isbn = selected_row["isbn"].values[0]
 
-# 🔥 FIX FOR ERROR
-if isbn not in book_encoder.classes_:
-    st.warning("This book is not in trained model")
-    return pd.DataFrame()
+    # 🔥 FIX FOR ERROR
+    if isbn not in book_encoder.classes_:
+        st.warning("This book is not in trained model")
+        return pd.DataFrame()
 
-book_idx = book_encoder.transform([isbn])[0]
+    book_idx = book_encoder.transform([isbn])[0]
 
     distances, indices = model_knn.kneighbors(
         sparse_matrix.T[book_idx],
