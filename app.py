@@ -165,7 +165,13 @@ top_books = books.sample(10)
 
 if mode == "📖 Book Based":
 
-    selected_book = st.selectbox("Select Book", books["book_title"].unique())
+    # Filter only books present in model
+    valid_books = books[books["isbn"].isin(book_encoder.classes_)]
+
+    selected_book = st.selectbox(
+        "Select Book",
+        valid_books["book_title"].unique()
+    )
 
     if st.button("Recommend"):
 
