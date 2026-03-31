@@ -8,6 +8,17 @@ import numpy as np
 # ---------------------------------------------------
 st.set_page_config(page_title="Book Recommender", layout="wide")
 
+st.title("📚 Book Recommendation System")
+
+st.markdown("""
+<style>
+h1 {
+    color: white !important;
+    text-align: center;
+}
+</style>
+""", unsafe_allow_html=True)
+
 # ---------------------------------------------------
 # CSS
 # ---------------------------------------------------
@@ -222,6 +233,8 @@ elif mode == "👤 User Based":
                         <div class="book-score">{percent}% match</div>
                     </div>
                     """, unsafe_allow_html=True)
+
+st.markdown("<p style='text-align:center;color:gray;'>Find books you’ll love 🚀</p>", unsafe_allow_html=True)
 
 # ---------------------------------------------------
 # TRENDING SECTION
