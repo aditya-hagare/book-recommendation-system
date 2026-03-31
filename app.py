@@ -234,7 +234,6 @@ elif mode == "👤 User Based":
                     </div>
                     """, unsafe_allow_html=True)
 
-st.markdown("<p style='text-align:center;color:gray;'>Find books you’ll love 🚀</p>", unsafe_allow_html=True)
 
 # ---------------------------------------------------
 # TRENDING SECTION
@@ -254,3 +253,5 @@ for i, (_, row) in enumerate(top_books.iterrows()):
             <div class="book-title">{row['book_title']}</div>
         </div>
         """, unsafe_allow_html=True)
+
+st.markdown("<p style='text-align:center;color:gray;'>Find books you’ll love 🚀</p>", unsafe_allow_html=True)
