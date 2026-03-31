@@ -24,6 +24,7 @@ body {background-color:#0e1117;}
     width:160px;
     height:240px;
     border-radius:12px;
+    object-fit: cover; 
     transition:0.3s;
     box-shadow:0 0 15px rgba(0,255,200,0.4);
 }
