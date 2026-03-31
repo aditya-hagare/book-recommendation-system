@@ -1,5 +1,5 @@
 🚀 Live Demo
-👉 https://book-recommendation-system-main.streamlit.app/
+👉 https://book-recommendation-system-18.streamlit.app/
 
 📚 Book Recommendation System
 
